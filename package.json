@@ -47,7 +47,7 @@
     "lib/cjs/util/*.*"
   ],
   "scripts": {
-    "test": "mocha --reporter spec --require source-map-support/register --timeout 10000 lib/async/test",
+    "test": "node --http-parser=legacy --insecure-http-parser $(which mocha) --reporter spec --require source-map-support/register --timeout 10000 lib/async/test/04-transactions.js",
     "pretest": "yarn dist",
     "ci": "mocha --reporter spec --require source-map-support/register --timeout 30000 lib/cjs/test",
     "preci": "yarn install",
